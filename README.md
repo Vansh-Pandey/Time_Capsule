@@ -1,8 +1,7 @@
 # Time Capsule
 
 ## Project Overview
-Time Capsule is a web application that allows users to create, store, and share time-locked or shared capsules containing text, multimedia, or event-based content. The application includes features such as authentication, a dashboard for managing capsules, chat functionality, notifications, and account settings.
-
+Time Capsule is a web application that enables users to create and store time-locked capsules containing text and multimedia content. With built-in authentication, users can securely manage their capsules, ensuring they remain private until the specified unlock time. This project offers a seamless and intuitive experience for preserving memories or messages for future access.
 ---
 
 ## Installation and Setup
@@ -148,13 +147,10 @@ The application should now be accessible in your browser at `http://localhost:51
 
 ## Contribution
 Feel free to contribute by creating issues, submitting pull requests, or suggesting improvements!
-
+This project is made Team Scout Regiment Squad lead by **Vansh Pandey** along with Team Member **Lav Khator** for KrackHack'25 , IIT Mandi.
 ---
 
-## License
-This project is licensed under the MIT License.
 
----
 
 ## Contact
 For any issues or inquiries, reach out to **Vansh Pandey**.
