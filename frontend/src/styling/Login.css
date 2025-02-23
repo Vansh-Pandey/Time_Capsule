@@ -1,0 +1,365 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4c531;
+}
+
+/* Overlay with fade-in animation */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation: overlayFadeIn 0.5s ease;
+}
+
+/* Container with fadeIn effect */
+.container {
+  height: 31.25rem;
+  width: 31.25rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Form with slideIn animation */
+form {
+  width: 23.75em;
+  height: 18.75em;
+  background-color: #3f3c3c;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% + 3.1em);
+  left: 50%;
+  padding: 0 3.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5em;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  color: #f5eff6;
+}
+
+form input {
+  font-size: 0.95em;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #3f3c3c;
+  padding: 0.3em;
+  height: 2.3em;
+  border: 1px solid #ffffff;
+  border-radius: 0.5em;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #f4c531;
+}
+
+form input:not(:last-child) {
+  margin-bottom: 0.9em;
+}
+
+form button {
+  font-size: 0.95em;
+  padding: 0.8em 0;
+  border-radius: 2em;
+  border: none;
+  outline: none;
+  background-color: #f4c531;
+  color: #2e0d30;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-top: 0.8em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* Panda Face and related elements */
+#head {
+  width: 2.5em;
+  height: 2.81em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.face {
+  width: 125px;
+  height: 125px;
+  background-color: #ffb78e;
+  position: absolute;
+  top: 3.6em;
+  left: 11em;
+  border-radius: 70% 65% 12% 90% / 70% 50% 70% 65%;
+  border: 1px solid #000;
+}
+
+.face::before {
+  content: "";
+  position: absolute;
+  width: 32.5px;
+  height: 40px;
+  background-color: #ffb78e;
+  transform: translate(-30px, 50px) rotate(-10deg);
+  border-radius: 80% 65% 73% 80% / 80% 40% 30% 70%;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.face::after {
+  content: "";
+  position: absolute;
+  width: 77.5px;
+  height: 74.5px;
+  background-color: #ffb78e;
+  transform: translate(72.5px, 49px);
+  border-radius: 90% 65% 80% 90% / 40% 100% 70% 60%;
+  border-right: 2px solid #000;
+}
+
+.hair {
+  width: 75px;
+  height: 7.5px;
+  background-color: #000;
+  position: absolute;
+  border-radius: 45% 65% 0% 100% / 100% 100% 0% 0%;
+  top: -2px;
+  left: 19.5px;
+}
+
+.hair::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  background-color: #000;
+  top: -2.5px;
+  left: -24.5px;
+  transform: rotate(19deg);
+  z-index: -1;
+  border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
+}
+
+.eyebrowLeft {
+  position: absolute;
+  background-color: #000;
+  width: 33.5px;
+  height: 12.5px;
+  border-radius: 30px;
+  transform: rotate(137deg);
+  top: 6px;
+  left: 4.5px;
+  animation: hello 1s infinite ease-in-out;
+}
+
+.eyebrowLeft::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 33.5px;
+  height: 12.5px;
+  border-radius: 30px;
+  transform: rotate(85deg);
+  top: -12px;
+  right: 12.5px;
+}
+
+.eyebrowRight {
+  position: absolute;
+  background-color: #000;
+  width: 33.5px;
+  height: 12.5px;
+  border-radius: 30px;
+  transform: rotate(137deg);
+  top: 6px;
+  left: 65px;
+  animation: hello 1s infinite ease-in-out;
+}
+
+.eyebrowRight::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 33.5px;
+  height: 12.5px;
+  border-radius: 30px;
+  transform: rotate(85deg);
+  top: -12px;
+  right: 12.5px;
+}
+
+.eyeLeft {
+  position: absolute;
+  background-color: #000;
+  width: 34px;
+  height: 30px;
+  border-radius: 50%;
+  top: 40px;
+  left: 21.5px;
+}
+
+.eyeLeft::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border-top: 2px solid #000;
+  border-radius: 53% 47% 45% 55% / 57% 36% 64% 43%;
+  top: -12.5px;
+  left: -7.5px;
+}
+
+.eyeRight {
+  position: absolute;
+  background-color: #000;
+  width: 34px;
+  height: 30px;
+  border-radius: 50%;
+  top: 40px;
+  left: 71.5px;
+  z-index: 2;
+}
+
+.eyeRight::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  border-top: 2px solid #000;
+  border-radius: 53% 47% 45% 55% / 38% 52% 48% 66%;
+  top: -12.5px;
+  left: -1px;
+}
+
+.eyeLeft,
+.eyeRight {
+  /* Ensure a consistent transition for eye container if needed */
+  transition: all 0.4s ease;
+}
+
+/* Eyeball elements inside each eye */
+.eyeball-l,
+.eyeball-r {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  left: 0.6em;
+  top: 0.5em;
+  transition: all 0.3s ease;
+}
+
+/* Closed eyes: when the "closed" class is applied to the eyeballs */
+.eyeball-l.closed,
+.eyeball-r.closed {
+  display: none;
+  
+}
+.eyeLeft.closed,
+.eyeRight.closed {
+  border:2px solid  #ffb78e;
+  background-color: #ffb78e;
+  border-bottom: 2px #000 solid;
+}
+.eyeLeft::before.closed,
+.eyeRight::before.closed {
+  border-top:2px solid  #ffb78e;
+
+}
+
+.mouth {
+  position: absolute;
+  width: 22.5px;
+  height: 30px;
+  background-color: rgb(165, 67, 84);
+  border-radius: 50%;
+  border: 1px solid #000;
+  top: 102.5px;
+  right: 25px;
+  z-index: 2;
+}
+.hand-l,
+.hand-r {
+  background-color: #3f3554;
+  height: 2.81em;
+  width: 2.5em;
+  border: 0.18em solid #2e0d30;
+  border-radius: 0.6em 0.6em 2.18em 2.18em;
+  transition: 1s all;
+  position: absolute;
+  top: 8.4em;
+}
+.hand-l {
+  left: 7.5em;
+}
+.hand-r {
+  right: 7.5em;
+}
+.register-link {
+  text-align: center;
+  position: absolute;
+  bottom: 3.5em;
+  left: 19em;
+  right: 0;
+}
+
+.register-link a {
+  color: #888efb;
+}
+
+/* Animations */
+@keyframes hello {
+  to {top: -0.01px}
+}
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 14px;
+  }
+}

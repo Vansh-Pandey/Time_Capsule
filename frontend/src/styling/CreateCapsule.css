@@ -1,0 +1,163 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General page styling */
+  .createcapsule-page {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f3f4f6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: monospace;
+      animation: fadeIn 0.5s ease-in-out;
+      overflow: hidden;
+  }
+  
+  /* Capsule Container Styling */
+  .capsule-container {
+      width: 90%;
+      max-width: 450px;
+      background-color: #ffffff;
+      border-radius: 30px;
+      box-shadow: 12px 10px 20px rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      position: relative;
+      animation: fadeIn 1s ease-in-out;
+      overflow: hidden;
+      margin: 20px;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+  
+  /* Close Button */
+  .close-button {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background-color: #ff0000;
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .close-button:hover {
+      background-color: #e60000;
+      transform: scale(1.1);
+  }
+  
+  /* Form Styling */
+  .createcapsule-form {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      margin-top: 40px;
+  }
+  
+  .createcapsule-form h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+      text-transform: uppercase;
+      animation: slideInLeft 1s ease-in-out;
+  }
+  
+  @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  }
+  
+  .createcapsule-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.2em;
+      color: #555;
+      animation: fadeIn 2s ease-in-out;
+  }
+  
+  .createcapsule-form input,
+  .createcapsule-form select,
+  .createcapsule-form textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 0 auto 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 1.1em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .createcapsule-form input:focus,
+  .createcapsule-form select:focus,
+  .createcapsule-form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #ff4d4d;
+      transform: scale(1.05);
+  }
+  
+  .createcapsule-form button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.5em;
+      color: white;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .createcapsule-form button[type="submit"]:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+      .createcapsule-form h2 {
+          font-size: 2rem;
+      }
+      .createcapsule-form input,
+      .createcapsule-form select,
+      .createcapsule-form textarea {
+          padding: 10px;
+          font-size: 1em;
+      }
+      .createcapsule-form button[type="submit"] {
+          padding: 10px;
+          font-size: 1.2em;
+      }
+      .close-button {
+          top: 10px;
+          right: 10px;
+          width: 35px;
+          height: 35px;
+      }
+  }
+  
