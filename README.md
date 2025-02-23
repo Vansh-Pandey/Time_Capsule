@@ -2,6 +2,7 @@
 
 ## Project Overview
 Time Capsule is a web application that enables users to create and store time-locked capsules containing text and multimedia content. With built-in authentication, users can securely manage their capsules, ensuring they remain private until the specified unlock time. This project offers a seamless and intuitive experience for preserving memories or messages for future access.
+The site is live at [Time Capsule](https://time-capsule-os6a.onrender.com)
 ---
 
 ## Installation and Setup
